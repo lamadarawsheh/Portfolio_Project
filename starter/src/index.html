@@ -15,51 +15,67 @@
   <body id="body">
     <header class="header">
       <nav class="navbar">
-        <ul class="nav-menu" aria-label="nav-bar-menu">
-          <li class="nav-link"><a href="#">Projects</a></li>
-          <li class="nav-link"><a href="#">Skills</a></li>
-          <li class="nav-link"><a href="#">Resume</a></li>
-          <li class="nav-link"><a href="#">Contact</a></li>
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Projects</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Skills</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Resume</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main id="main">
       <section id="bio" class="bio">
-        <img src="" alt="lama darawsheh's profile image" />
-        <section class="bio-text">
-          <h1 class="bio-heading">Lama Darawsheh</h1>
-          <p class="bio-paragraph">
+        <img class="bio__image" src="" alt="lama darawsheh's profile image" />
+        <div class="bio__text">
+          <h1 class="bio__heading">Lama Darawsheh</h1>
+          <p class="bio__paragraph">
             some type of paragraph in here that has alot of feature about me and
             i want to talk about myself as a breif introduction
           </p>
-        </section>
+        </div>
       </section>
-      <section id="latest-projects" class="latest-projects">
-        <h2 class="latest-projects-heading">Latest Projects</h2>
+      <section id="projects" class="projects">
+        <h2 class="projects__heading">Latest Projects</h2>
+        <div class="projects__cards">
+          <div class="project-card">
+            <img src="" alt="project  1 image " class="project-card__image" />
+            <h3 class="project-card__title">project 1</h3>
+            <p class="project-card__description">
+              rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer
+            </p>
+          </div>
 
-        <div class="project-card">
-          <img src="" alt="project-image" class="project-image" />
-          <h3 class="project-title">project 1</h3>
-          <p class="project-info">rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer</p>
+          <div class="project-card">
+            <img src="" alt="project 2 image " class="project-card__image" />
+            <h3 class="project-card__title">project 2</h3>
+            <p class="project-card__description">
+              rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img src="" alt="project  3 image " class="project-card__image" />
+            <h3 class="project-card__title">project 3</h3>
+            <p class="project-card__description">
+              rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer
+            </p>
+          </div>
         </div>
-
-        <div class="project-card">
-          <img src="" alt="project-image" class="project-image" />
-          <h3 class="project-title">project 2</h3>
-          <p class="project-info">rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer</p>
-        </div>
-
-        <div class="project-card">
-          <img src="" alt="project-image" class="project-image" />
-          <h3 class="project-title">project 3</h3>
-          <p class="project-info">rhfkehrfhre fhkdhfkehf jdbfjhebrwjfbjer</p>
-        </div>
-
-        <button class="view-projects-button">View All Projects</button>
+        <button class="projects__button">View All Projects</button>
       </section>
     </main>
     <footer class="footer">
-      © Lama Darawsheh <time datetime="2025">2025</time>
+      <p class="footer__paragraph">
+        © Lama Darawsheh <time datetime="2025">2025</time>
+      </p>
     </footer>
   </body>
 </html>
