@@ -1,0 +1,83 @@
+.projects {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__heading {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  &__cards {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    background-color: $font-color;
+    color: $project-card-text;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $font-color;
+      background-color: $hover-color;
+    }
+  }
+}
+.project-card {
+  flex: 1 1 calc(33% - 2rem);
+  background-color: $secondary-background-color;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 300px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &__image {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    color: $project-card-text;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: $project-card-text;
+  }
+}
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 calc(33% - 1rem);
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .project-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

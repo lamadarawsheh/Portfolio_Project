@@ -1,0 +1,4 @@
+@mixin bioImageResize($maxWidth, $maxHeight) {
+    max-width: $maxWidth;
+    max-height: $maxHeight;
+  }

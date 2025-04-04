@@ -1,0 +1,79 @@
+.bio {
+  background-image: url("/src/img/backgroundimg.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__text {
+    width: 40%;
+    padding: 1rem;
+  }
+  &__heading {
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    padding: 0.5rem;
+    line-height: 1.9rem;
+    font-weight: normal;
+  }
+}
+.fade {
+  animation: fade 0.8s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 10;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .bio__image {
+    @include bioImageResize(180px, 180px);
+  }
+  .bio__text {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .bio__image {
+    @include bioImageResize(140px, 140px);
+  }
+  .bio {
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .bio__text {
+    width: 100%;
+    text-align: center;
+  }
+  .bio__paragraph {
+    line-height: 1.4rem;
+    font-weight: lighter;
+  }
+}
