@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./dist/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body id="body">
+    <a href="#main" id="skip-link">Skip to main content</a>
+    <header class="header">
+      <nav class="navbar" aria-label="main navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="#Projects">Projects</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#Skills">Skills</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#Resume">Resume</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+        <button
+          class="navbar__burger"
+          aria-label="burger looking menu button for mobile view "
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+      </nav>
+      <nav class="navbar__mobile" aria-label="navbar for mobile view ">
+        <ul
+          class="navbar__mobile__list"
+          aria-label="navbar menu for mobile view "
+        >
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Resume">Resume</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="bio" class="bio fade">
+        <div class="bio__text fade">
+          <h1 class="bio__heading">Lama Darawsheh</h1>
+          <p class="bio__paragraph">
+            Creative Software Engineer passionate about building professional,
+            accessible, and user-centered web experiences currently on full
+            stack development journey .
+          </p>
+        </div>
+        <img
+          class="bio__image fade"
+          src="./src/img/profilei.jpeg"
+          alt="grey  placeholder  profile image for lama darawsheh"
+        />
+      </section>
+      <section id="projects" class="projects">
+        <h2 class="projects__heading">Latest Projects</h2>
+        <div class="projects__cards">
+          <div class="project-card">
+            <img
+              src="https://placehold.co/600x400"
+              alt=" grey placholder image for project 1 "
+              class="project-card__image"
+            />
+            <h3 class="project-card__title" aria-label=" project-card__title">
+              project 1
+            </h3>
+            <p
+              class="project-card__description"
+              aria-label=" project-card__description"
+            >
+              This project enhaces usesr experiance by mimicing performance .
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="https://placehold.co/600x400"
+              alt="grey placholder image for project 2  "
+              class="project-card__image"
+            />
+            <h3 class="project-card__title" aria-label=" project-card__title">
+              project 2
+            </h3>
+            <p
+              class="project-card__description"
+              aria-label=" project-card__description"
+            >
+              This project enhaces usesr experiance by mimicing performance .
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="https://placehold.co/600x400"
+              alt="grey placholder image for project  3  "
+              class="project-card__image"
+            />
+            <h3 class="project-card__title" aria-label=" project-card__title">
+              project 3
+            </h3>
+            <p
+              class="project-card__description"
+              aria-label=" project-card__description"
+            >
+              This project enhaces usesr experiance by mimicing performance .
+            </p>
+          </div>
+        </div>
+        <a
+          class="projects__button"
+          aria-label="view all projects button"
+          href="https://github.com/lamadarawsheh"
+        >
+          View All Projects</a
+        >
+      </section>
+    </main>
+    <footer class="footer" aria-label="footer">
+      © Lama Darawsheh <time datetime="2025">2025</time>
+    </footer>
+
+    <script src="./src/scripts/navbar.js"></script>
+  </body>
+</html>

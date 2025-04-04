@@ -5,12 +5,23 @@
 }
 body {
   line-height: 1.6;
-  //   background-color: #060606;
-  //   color: #fbfafa;
-
-  min-height: 100%;
+  background-color: $primary-background-color;
+  font-family: $font-family;
+  color: $font-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-self: center;
+}
+#skip-link {
+  position: fixed;
+  top: -300px;
+  left: 0;
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important ;
+    transition: none !important;
+  }
 }
