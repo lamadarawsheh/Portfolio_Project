@@ -6,9 +6,8 @@
 
 body {
   line-height: 1.6;
-  background-color: #000904;
   font-family: "Poppins", sans-serif;
-  color: #EAEAEA;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +124,6 @@ body {
 }
 
 .bio {
-  background-image: url("/src/img/backgroundimg.png");
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -213,6 +211,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .projects__heading {
   text-align: center;
@@ -221,9 +221,15 @@ body {
 .projects__cards {
   padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 3rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.projects__cards::-webkit-scrollbar {
+  display: none;
 }
 .projects__button {
   display: inline-block;
@@ -242,9 +248,14 @@ body {
   background-color: #17314A;
 }
 
+.project-link {
+  text-decoration: none;
+  display: flex;
+}
+
 .project-card {
-  flex: 1 1 calc(33% - 2rem);
-  background-color: #b9bbb9;
+  flex: 0 0 auto;
+  width: 450px;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -253,7 +264,7 @@ body {
   gap: 0.5rem;
   padding: 1.5rem;
   text-align: center;
-  max-width: 300px;
+  scroll-snap-align: start;
   transition: all 0.3s ease-in-out;
 }
 .project-card:hover {
@@ -269,23 +280,216 @@ body {
   color: #000000;
 }
 .project-card__description {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-align: left;
   color: #000000;
 }
 
 @media (max-width: 768px) {
   .project-card {
-    flex: 1 1 calc(33% - 1rem);
-    max-width: 100%;
+    width: 280px;
   }
 }
 @media (max-width: 480px) {
   .project-card {
-    flex: 1 1 100%;
-    max-width: 100%;
+    width: 240px;
   }
 }
+.mobileProjects {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.mobileProjects__heading {
+  text-align: center;
+  padding: 1rem;
+}
+.mobileProjects__cards {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 3rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.mobileProjects__cards::-webkit-scrollbar {
+  display: none;
+}
+.mobileProjects__button {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background-color: #EAEAEA;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+.mobileProjects__button:hover {
+  transform: scale(1.1);
+  color: #EAEAEA;
+  background-color: #17314A;
+}
+
+.mproject-link {
+  text-decoration: none;
+  display: flex;
+  width: 450px;
+  padding: 0.5rem;
+}
+
+.mproject-card {
+  flex: 0 0 auto;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: all 0.3s ease-in-out;
+}
+.mproject-card:hover {
+  transform: scale(1.1);
+}
+.mproject-card__image {
+  width: 60%;
+  height: 80%;
+  display: block;
+  border-radius: 1rem;
+}
+.mproject-card__title {
+  font-weight: bold;
+  color: #000000;
+}
+.mproject-card__description {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .mproject-link {
+    width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  .mproject-link {
+    width: 240px;
+    height: 240px;
+  }
+}
+.skills {
+  padding: 0% 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.skills__heading {
+  text-align: center;
+  padding: 1rem;
+}
+.skills__list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+.skills__list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.skills__list__item .fab {
+  font-size: 2rem;
+  color: #17314A;
+  padding: 0.5rem;
+}
+.skills__list__item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #17314A;
+}
+
+.contact {
+  padding: 0% 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__heading {
+  text-align: center;
+  padding: 1rem;
+}
+.contact__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact__info .email {
+  text-align: center;
+  padding: 0.6rem 1rem;
+}
+.contact__info .number {
+  text-align: center;
+  padding: 0.6rem 1rem;
+}
+.contact__info .socials {
+  text-decoration: none;
+}
+
+.Resume {
+  padding: 0% 10% 5% 10%;
+}
+.Resume__heading {
+  text-align: center;
+  padding: 1rem;
+}
+.Resume__paragraph {
+  text-align: center;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 15px #6e79a3;
+}
+.Resume__paragraph .Resume__link {
+  text-decoration: none;
+  color: #17314A;
+  padding: 0.3rem 1rem;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.Resume__paragraph .Resume__link:hover {
+  color: #377FC3;
+  transform: scale(1.1);
+}
+
 main {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,41 @@
+.skills {
+  padding: 0% 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  &__heading {
+    text-align: center;
+    padding: 1rem;
+  }
+  &__list {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        .fab{
+            font-size: 2rem;
+            color: $hover-color;
+            padding: 0.5rem;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $hover-color;
+        }
+      }
+ 
+  }
+ 
+}
