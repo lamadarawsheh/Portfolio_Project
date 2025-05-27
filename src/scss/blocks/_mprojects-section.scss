@@ -1,4 +1,4 @@
-.projects {
+.mobileProjects {
   padding: 5% 10%;
   display: flex;
   flex-direction: column;
@@ -45,13 +45,15 @@
     }
   }
 }
-.project-link {
+.mproject-link {
   text-decoration: none;
   display: flex;
-}
-.project-card {
-  flex: 0 0 auto;
   width: 450px;
+  padding: 0.5rem;
+}
+.mproject-card {
+  flex: 0 0 auto;
+  width: 100%;
   // background-color: $secondary-background-color;
   border-radius: 1rem;
   display: flex;
@@ -69,8 +71,8 @@
   }
 
   &__image {
-    width: 100%;
-    // height: 80%;
+    width: 60%;
+    height: 80%;
     // padding: 0.5rem;
     display: block;
     border-radius: 1rem;
@@ -89,13 +91,17 @@
 }
 
 @media (max-width: 768px) {
-  .project-card {
+  .mproject-link {
     width: 280px;
   }
 }
 
 @media (max-width: 480px) {
-  .project-card {
+ 
+  .mproject-link {
+    
     width: 240px;
+    height: 240px;
   }
+  
 }

@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+//TODO AGJUST THE THEME COLORS
 body {
   line-height: 1.6;
-  background-color: $primary-background-color;
+  // background-color: $primary-background-color;
   font-family: $font-family;
-  color: $font-color;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
