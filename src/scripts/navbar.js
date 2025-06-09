@@ -20,4 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", toogle_mobilemenu);
   window.addEventListener("resize", toogle_mobilemenu_resize);
   window.addEventListener("scroll", shrink_navbar);
+  document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
 });

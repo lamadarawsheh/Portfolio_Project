@@ -139,7 +139,7 @@
                 aria-label=" project-card__description"
               >
                 Developed an XOgame using JavaScript, HTML, and CSS, featuring a
-                user-friendlyinterface and logic for two players to play against
+                user-friendly interface and logic for two players to play against
                 each other.
               </p>
             </div>
@@ -326,7 +326,7 @@
         <p class="Resume__paragraph">
           <a
             class="Resume__link"
-            href="/src/assests/Lama Darawsheh's Resume.pdf"
+            href="/src/assets/Lama Darawsheh's Resume.pdf"
             download="Lama_Darawsheh_Resume.pdf"
             >Click To Download
           </a>
@@ -335,7 +335,11 @@
       <section class="contact" id="Contact">
         <h2 class="contact__heading">Contact Details</h2>
         <div class="contact__info">
-          <p class="email">lama.ndarawsheh@gmail.com</p>
+          <p class="email">
+            <a href="mailto:lama.ndarawsheh@gmail.com" class="email-link"
+              >lama.ndarawsheh@gmail.com</a
+            >
+          </p>
           <div class="skills__list__item">
             <a href="https://github.com/lamadarawsheh" class="socials">
               <i class="fab fa-github"></i>
@@ -352,10 +356,13 @@
         </div>
       </section>
     </main>
-    <footer class="footer" aria-label="footer">
-      © Lama Darawsheh <time datetime="2025">2025</time>
+    <footer class="footer">
+      <div class="footer__content">
+        <p class="footer__copyright">
+          © <span id="currentYear"></span> Lama Darawsheh. All rights reserved.
+        </p>
+      </div>
     </footer>
-
     <script src="./src/scripts/navbar.js"></script>
   </body>
 </html>
