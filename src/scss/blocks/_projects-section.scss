@@ -1,5 +1,5 @@
 .projects {
-  padding: 5% 10%;
+  padding: 5% 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,51 +51,209 @@
 }
 .project-card {
   flex: 0 0 auto;
-  width: 450px;
-  // background-color: $secondary-background-color;
+  width: 350px;
+  height: 280px;
   border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1.5rem;
-  text-align: center;
-  scroll-snap-align: start;
+  border: 2px solid #e0e0e0;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  margin: 0;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    border-color: #377fc3;
+  }
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
   }
 
   &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    // height: 80%;
-    // padding: 0.5rem;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
     display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     border-radius: 1rem;
   }
 
-  &__title {
-    font-weight: bold;
-    color: $project-card-text;
+  &__overlay-content {
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    max-height: 100%;
+    overflow-y: auto;
   }
 
-  &__description {
+  &__overlay-title {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  &__overlay-description {
     font-size: 0.8rem;
-    text-align: left;
-    color: $project-card-text;
+    text-align: center;
+    color: white;
+    line-height: 1.4;
+  }
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &:hover &__image {
+    transform: scale(1.1);
+  }
+
+  &__corner-icons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover &__corner-icons {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    pointer-events: auto;
+    backdrop-filter: blur(5px);
+    position: relative;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+      transform: scale(1.1);
+      color: #377fc3;
+    }
+
+    i {
+      font-size: 1.2rem;
+    }
+
+    &--github {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+    }
+
+    &--demo {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .project-card {
     width: 280px;
+    height: 260px;
+  }
+
+  .project-card__image-container {
+    height: 180px;
+  }
+
+  .project-card__overlay-title {
+    font-size: 0.9rem;
+  }
+
+  .project-card__overlay-description {
+    font-size: 0.75rem;
+  }
+
+  .project-card__icon {
+    width: 35px;
+    height: 35px;
+
+    i {
+      font-size: 1rem;
+    }
   }
 }
 
 @media (max-width: 480px) {
   .project-card {
     width: 240px;
+    height: 220px;
+  }
+
+  .project-card__image-container {
+    height: 140px;
+  }
+
+  .project-card__overlay-title {
+    font-size: 0.8rem;
+  }
+
+  .project-card__overlay-description {
+    font-size: 0.7rem;
+  }
+
+  .project-card__icon {
+    width: 30px;
+    height: 30px;
+
+    i {
+      font-size: 0.9rem;
+    }
+
+    &--github {
+      bottom: 0.8rem;
+      left: 0.8rem;
+    }
+
+    &--demo {
+      bottom: 0.8rem;
+      right: 0.8rem;
+    }
   }
 }
